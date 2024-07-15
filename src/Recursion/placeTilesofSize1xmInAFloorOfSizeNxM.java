@@ -16,7 +16,7 @@ public class placeTilesofSize1xmInAFloorOfSizeNxM {
     }
     public static void main(String[] args) {
         int n=4;
-        int m=2t;
+        int m=2;
         System.out.println(recursion(n,m));
     }
 }
