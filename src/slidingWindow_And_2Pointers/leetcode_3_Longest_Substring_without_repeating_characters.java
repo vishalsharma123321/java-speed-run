@@ -8,8 +8,6 @@ public class leetcode_3_Longest_Substring_without_repeating_characters {
         int maxlength = 0;
         int length = s.length();
         HashMap<Character, Integer> map = new HashMap<>();
-
-
         // if you dont under stand then see the explanation below .
         while (r < length) {
             if (map.containsKey(s.charAt(r))) {
@@ -22,13 +20,13 @@ public class leetcode_3_Longest_Substring_without_repeating_characters {
         return maxlength;
     }
     public static void main(String[] args) {
-         String s = "abcabcbb";
+         String s = "abacd";
         System.out.println(lengthOfLongestSubstring(s));
 
      }
 }
 
-
+//
 //Explanation with an Example
 //Consider the string s = "abba".
 //
@@ -73,5 +71,8 @@ public class leetcode_3_Longest_Substring_without_repeating_characters {
 //Update maxlength: maxlength = max(2, 3 - 2 + 1) = 2
 //Move r to the next character: r = 4 (end of string)
 //Summary
-//The key idea of l = Math.max(map.get(s.charAt(r)) + 1, l); is to ensure l only moves forward to maintain the validity of the substring s[l..r]. It does this by setting l to the position right after the last occurrence of the current character if that character has been seen before, but only if this new position is greater than the current value of l. This ensures that l never moves backward, maintaining the invariant and correctness of the sliding window.
+//The key idea of l = Math.max(map.get(s.charAt(r)) + 1, l); is to ensure l only moves forward to maintain the validity of
+// the substring s[l..r]. It does this by setting l to the position right after the last occurrence of the current character
+// if that character has been seen before, but only if this new position is greater than the current value of l. This ensures
+// that l never moves backward, maintaining the invariant and correctness of the sliding window.
 //
