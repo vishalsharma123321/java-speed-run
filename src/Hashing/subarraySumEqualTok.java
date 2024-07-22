@@ -25,3 +25,21 @@ public class subarraySumEqualTok {
         System.out.println(ans);
     }
 }
+
+/*
+efficent way of writing the above code
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1); // Empty subarray with sum 0
+
+        int count = 0, Sum = 0;
+
+        for (int num : nums) {
+            Sum += num;
+            count += map.getOrDefault(Sum - goal, 0);
+            map.put(Sum, map.getOrDefault(Sum, 0) + 1);
+        }
+
+        return count;
+
+ */
