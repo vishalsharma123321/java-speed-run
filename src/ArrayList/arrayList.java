@@ -1,5 +1,6 @@
 package ArrayList;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class arrayList {
     public static void main(String[] args) {
@@ -38,11 +39,16 @@ public class arrayList {
         for (int i=0 ; i<list.size() ; i++){
             System.out.println(list.get(i));
         }
-
         int add =list.get(1)+4;
-
         System.out.println("add " +add );
 
+        // how to sort an arraylist using collections
+        System.out.println("how to sort an arraylist using collections");
+        list.add(3);
+        list.add(1);
+        list.add(14);
+        Collections.sort(list);
+        System.out.println(list);
 
 
 
